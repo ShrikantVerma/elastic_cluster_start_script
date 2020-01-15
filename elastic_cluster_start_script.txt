@@ -1,0 +1,17 @@
+#!/bin/sh
+logstash=$(ps -ef | grep -v grep | grep "logstash_jupiter" | wc -l);
+export https_proxy=http://AaaaaK:'new%402019'@proxy.tel.com:4145
+export http_proxy=http://A1YKGK:'new%9'@proxy.tel.com:4145
+
+if [ $logstash == '0' ];
+        then
+                curl -i -k -X POST https://149.154.167.220:443/bot87159362:AAGdrD-OpcX3b1BRa6KD2NxEIaKAXbQi68/sendMessage --data "chat_id=-267279142&text=10.5.28.62 logstash_jupiter is dead"
+                                sleep 5s
+                              cd /opt/logstash_jupiter && nohup bin/logstash -f &
+                                        logstash=$(ps -ef | grep -v grep | grep "logstash_jupiter" | wc -l);
+                                                if [ $logstash == '1' ];
+                                                        then
+                                                        curl -i -k -X POST https://api.telegram.org/bot89362:AAGdrD-OpcX3b1BRa6iaKAXbQi68/sendMessage --data "chat_id=-2672792&text=10.5.28.62 logstash_jupiter is restarted"
+
+                                                fi
+fi
